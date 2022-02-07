@@ -31,7 +31,7 @@ class SimpleVGG11(nn.Module):
         self.conv_block4 = vgg_block_double(128, 256)
 
         self.fc_layers = nn.Sequential(
-            nn.Linear(256 * 7 * 7, 4096), nn.ReLU(inplace=True), nn.Dropout(),
+            nn.Linear(256 * 4 * 4, 4096), nn.ReLU(inplace=True), nn.Dropout(),
             nn.Linear(4096, 4096), nn.ReLU(inplace=True), nn.Dropout(),
             nn.Linear(4096, num_classes)
         )
