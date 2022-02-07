@@ -4,8 +4,8 @@
 defaults:
   - _self_
   - trainer: default.yaml
-  - model: mnist.yaml
-  - datamodule: mnist.yaml
+  - model: single_figure.yaml
+  - datamodule: single_figure.yaml
   - callbacks: default.yaml
   - logger: null # set logger here or use command line (e.g. `python run.py logger=wandb`)
 
@@ -33,7 +33,7 @@ defaults:
 work_dir: ${hydra:runtime.cwd}
 
 # path to folder with data
-data_dir: ${work_dir}/data/
+data_dir: ${work_dir}/data/custom/video_0_crops/
 
 # pretty print config at the start of the run using Rich library
 print_config: True

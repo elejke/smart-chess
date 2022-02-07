@@ -1,0 +1,6 @@
+_target_: src.models.single_figure_module.SingleFigureLitModule
+
+input_size: [3, 64, 64]
+output_size: 6
+lr: 0.001
+weight_decay: 0.0005
