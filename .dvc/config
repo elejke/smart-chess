@@ -1,4 +1,0 @@
-[core]
-    remote = gdrive
-['remote "gdrive"']
-    url = gdrive://15l7ZLzHpd7k1aRkwqk8teiRnyO3MneXH
