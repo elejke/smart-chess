@@ -2,4 +2,4 @@ outs:
 - md5: 16c9db0f5dd831ebba0c5072219fedc8.dir
   size: 79342646
   nfiles: 226
-  path: supervisely
+  path: spv
