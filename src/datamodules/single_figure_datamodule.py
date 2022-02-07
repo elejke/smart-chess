@@ -96,9 +96,9 @@ class SingleFigureDataModule(LightningDataModule):
                                            shuffle=True, num_workers=self.num_workers)
 
     def val_dataloader(self):
-        return torch.utils.data.DataLoader(self.data_val, batch_size=self.batch_size,
-                                           shuffle=True, num_workers=self.num_workers)
+        return torch.utils.data.DataLoader(self.data_train, batch_size=1,
+                                           shuffle=False, num_workers=self.num_workers)
 
     def test_dataloader(self):
-        return torch.utils.data.DataLoader(self.data_test, batch_size=self.batch_size,
-                                           shuffle=True, num_workers=self.num_workers)
+        return torch.utils.data.DataLoader(self.data_train, batch_size=1,
+                                           shuffle=False, num_workers=self.num_workers)
