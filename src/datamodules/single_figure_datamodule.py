@@ -56,8 +56,7 @@ class SingleFigureDataModule(LightningDataModule):
         ])
 
         self.val_transforms = transforms.Compose([
-            transforms.Resize(256),
-            transforms.CenterCrop(224),
+            transforms.Resize(64),
             transforms.ToTensor(),
             transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
         ])
@@ -96,9 +95,9 @@ class SingleFigureDataModule(LightningDataModule):
                                            shuffle=True, num_workers=self.num_workers)
 
     def val_dataloader(self):
-        return torch.utils.data.DataLoader(self.data_train, batch_size=1,
+        return torch.utils.data.DataLoader(self.data_val, batch_size=1,
                                            shuffle=False, num_workers=self.num_workers)
 
     def test_dataloader(self):
-        return torch.utils.data.DataLoader(self.data_train, batch_size=1,
+        return torch.utils.data.DataLoader(self.data_test, batch_size=1,
                                            shuffle=False, num_workers=self.num_workers)
