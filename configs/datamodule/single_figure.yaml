@@ -2,5 +2,5 @@ _target_: src.datamodules.single_figure_datamodule.SingleFigureDataModule
 
 data_dir: ${data_dir} # data_dir is specified in config.yaml
 batch_size: 16
-num_workers: 0
+num_workers: 12
 pin_memory: False
